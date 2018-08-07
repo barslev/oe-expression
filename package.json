@@ -13,7 +13,7 @@
     "async": "^2.5.0",
     "bunyan": "^1.8.12",
 	  "oe-logger": "^1.0.0",
-    "oe-cloud": "git+http://evgit/oec-next/oe-cloud/.git"
+    "oe-cloud": "git+http://evgit/oec-next/oe-cloud.git#master"
   },
   "devDependencies": {
     "jshint": "^2.5.6",
