@@ -61,12 +61,4 @@ module.exports = function ExpressionAstPopulator(Model) {
       log.debug(log.defaultContext(), 'ast building for oeValidation custom rule   ', Model.modelName, '->', validationName);
     }
   });
-
-  var otpEnabledMethods = Model.definition.settings.enableOTP || [];
-  otpEnabledMethods.forEach(function otpMethodIterate(otpConfig) {
-    var expression = otpConfig.authWhen;
-    if (expression) {
-      Model._ast[expression] = exprLang.createAST(expression);
-    }
-  });
 };
