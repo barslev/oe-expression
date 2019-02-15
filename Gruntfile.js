@@ -52,15 +52,18 @@ module.exports = function GruntConfig(grunt) {
     },
 
     mocha_istanbul: {
+      options: {
+        mochaOptions: ['--exit']
+      },
       coverage: {
         src: 'test/test.js',
         options: {
           timeout: 60000,
           check: {
-            lines: 30,
-            statements: 30,
-            branches: 30,
-            functions:30 
+            lines: 90,
+            statements: 90,
+            branches: 50,
+            functions: 100
           },
           reportFormats: ['lcov']
         }
