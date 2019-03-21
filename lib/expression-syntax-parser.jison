@@ -1465,6 +1465,10 @@ ModelExpressionLiteral
         {      
             $$=new ModelLiteralNode($2,$4,createSourceLocation(null,@1,@4));
         }
+    | "@M" "IDENTIFIER" "." "IDENTIFIER" "." "IDENTIFIER"
+        {
+            $$=new ModelLiteralNode($2,$4+"."+$6,createSourceLocation(null,@1,@6));
+        }
     ;
 
 WhereExpressionLiteral
